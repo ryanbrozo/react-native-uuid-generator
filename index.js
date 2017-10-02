@@ -12,7 +12,7 @@ export default {
         RNUUIDGenerator.getRandomUUID(resolve);
       });
     }
-  }
+  },
 
   getRandomBase64UUID(urlSafe, callback) {
     if (callback) {
