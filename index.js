@@ -13,4 +13,15 @@ export default {
       });
     }
   }
+
+  getRandomBase64UUID(urlSafe, callback) {
+    if (callback) {
+      RNUUIDGenerator.getRandomBase64UUID(urlSafe, callback);
+    }
+    else {
+      return new Promise((resolve, reject) => {
+        RNUUIDGenerator.getRandomBase64UUID(urlSafe, resolve);
+      });
+    }
+  }
 };
