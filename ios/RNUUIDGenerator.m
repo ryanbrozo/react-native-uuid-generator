@@ -25,6 +25,7 @@ RCT_EXPORT_METHOD(getRandomBase64UUID:(BOOL)urlSafe callback:(RCTResponseSenderB
   if (urlSafe) {
     base64String = [base64String stringByReplacingOccurrencesOfString:@"/" withString:@"_"];
     base64String = [base64String stringByReplacingOccurrencesOfString:@"+" withString:@"-"];
+    base64String = [base64String stringByReplacingOccurrencesOfString:@"=" withString:@""];
   }
     
   callback(@[base64String]);
